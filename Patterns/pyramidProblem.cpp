@@ -12,9 +12,12 @@ int main(){
         for ( int k = 1 ; k <= i+1 ; k++ ){
             cout << k ;
         }
-
-        for ( int m = 1 ; m > 0 ; )
         cout << "\n" ;
+
+        for ( int r = 1; r <= i -1 ; r++){
+            cout << "";
+        }
+
     }
 
 

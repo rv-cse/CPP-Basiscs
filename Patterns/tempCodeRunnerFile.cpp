@@ -1,2 +1,4 @@
 
-        cout << "\n" ;
+
+int main(){
+    int n = 3;
