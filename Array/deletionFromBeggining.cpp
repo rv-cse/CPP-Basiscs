@@ -2,27 +2,37 @@
 using namespace std;
 
 int main(){
-    int Q[10] = {2,3,4,5,6,7,8,9} ;
+    int s ;   // s is size of array
+    cout << "Enter the size of array : " ;
+    cin >> s ;
 
-    int capacity = 10 ;
-    int n = 8 ; // n = number of elements
+    int arr[s] , n ;   // n = number of elements in array 
 
-    if (capacity <= 0){
-        cout << "Underflow Condition!" ;
+    cout << "Enter the number of elements in array : " ;
+    cin >> n ;
+
+    if (n <= 0){
+        cout << "Underflow Condition!" << "\n";
+    }else{
+
+    cout << "Enter " << n << " elements : " ;
+    for ( int i = 0 ; i < n ; i++ ){
+        cin >> arr[i] ;
     }
 
-    Q[0] = 0 ;
+    arr[0] = 0 ;
     
     for ( int s = n-n ; s < n ; s++ ){
-        Q[s] = Q[s+1] ;
+    arr[s] = arr[s+1] ;
     }
 
     n = n-1 ;
 
-    cout << "Array after deletion : " ;
+    cout << "Array after deletion from Beginning : " ;
 
     for ( int i = 0 ; i < n ; i++ ){
-        cout << Q[i] << " " ; 
+        cout << arr[i] << " " ; 
+    }
     }
 
     return 0;

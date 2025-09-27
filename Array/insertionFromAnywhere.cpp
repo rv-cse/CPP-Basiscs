@@ -2,10 +2,19 @@
 using namespace std;
 
 int main(){
-    int arr[10], n , newElement , loc ;
+    int s ;     // s is the size of the array
+    cout << "Enter the size of the array : " ;
+    cin >> s ;
 
-    cout << "Enter the number of elements in array out of 10 : " ;
+    int arr[s], n , newElement , loc ;
+
+    cout << "Enter the number of elements : " ;
     cin >> n;
+
+    if(n == s){
+        cout << "Overflow condition!" << "\n" ;
+        return 0;
+    }
     
     cout << "Enter " << n << " Elements : " ;
 
@@ -18,11 +27,6 @@ int main(){
 
     cout << "Enter the location : " ;
     cin >> loc ;
-
-    if(n == 10){
-        cout << "Overflow condition." ;
-        return 0;
-    }
 
     for( int k = n-1 ; k >= loc ; k-- ){    // k is index of last element
             arr[k+1] = arr[k] ;

@@ -2,32 +2,41 @@
 using namespace std;
 
 int main(){
-    int r[10] = {1,2,3,4,5,6,7,8,9} ;
+    int s ;   // s is size of array
+    cout << "Enter the size of array : " ;
+    cin >> s ;
 
-    int capacity = 10 ;
-    int n = 9 ;
-    
-    if ( capacity <= 0 ){
+    int arr[s] , n ;   // n = number of elements in array 
+
+    cout << "Enter the number of elements in array : " ;
+    cin >> n ;
+
+    if ( n <= 0 ){
         cout << "Overflow Condition !" ;
     }
     else{
+        cout << "Enter " << n << " elements : " ;
 
-    int loc;
+        for ( int i = 0 ; i < n ; i++ ){
+            cin >> arr[i] ;
+        }
 
-    cout << "Enter the location : " ;
-    cin >> loc ;
+        int loc;
+
+        cout << "Enter the location : " ;
+        cin >> loc ;
     
-    for( int k = loc-1; k < n ; k++){
-        r[k] = r[k+1] ;
-    }
+        for( int k = loc-1; k < n ; k++){
+            arr[k] = arr[k+1] ;
+        }
 
-    n = n-1 ;
+        n = n-1 ;
 
-    cout << "Array after deletion : " ;
-    for ( int i = 0 ; i < n ; i++ ){
-        cout << r[i] << " " ;
-    }
-
+        cout << "Array after deletion : " ;
+        
+        for ( int i = 0 ; i < n ; i++ ){
+            cout << arr[i] << " " ;
+        }
     }
 
     return 0;

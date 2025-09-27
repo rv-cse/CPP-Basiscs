@@ -1,4 +1,4 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
 int main(){
@@ -7,29 +7,23 @@ int main(){
     cin >> s ;
 
     int arr[s] , n ;   // n = number of elements in array 
-
+    for ( int i = 0 ; i < n ; i++ ){
+        cin >> arr[i] ;
+    }
     cout << "Enter the number of elements in array : " ;
     cin >> n ;
 
-    if (n <= 0){
-        cout << "Underflow Condition!"  << "\n" ;
-    }
-    else{
-    cout << "Enter " << n << " Elements : " ;
-    for (int i = 0 ; i < n ; i++ ){
+    cout << "Enter " << n << " elements : " ;
+    for ( int i = 0 ; i < n ; i++ ){
         cin >> arr[i] ;
     }
-    
-    int k = n-1 ;
-
-    arr[k] = 0 ;
-
-    cout << "Array after deletion from End : " ;
 
     for ( int i = 0 ; i < n ; i++ ){
-        cout << arr[i] << " " ;
-    }
+        cout << arr[i] ;
     }
 
-    return 0;
+
+
+     
+
 }

@@ -2,10 +2,21 @@
 using namespace std;
 
 int main(){
-    int n, data, newElement, arr[10] ;
+    int s ;     // s is the size of the array
+    cout << "Enter the size of the array : " ;
+    cin >> s ;
 
-    cout << "Enter the number of elements = ";
+    int n, data, newElement, arr[s] ;
+
+    cout << "Enter the number of elements : " ;
     cin >> n;
+
+    if(n == s){
+        cout << "Overflow condition!" << "\n" ;
+        return 0;
+    }
+
+    cout << "Enter " << n << " Elements : " ;
 
     for(int i = 0; i < n; i++)
     {
@@ -14,11 +25,6 @@ int main(){
 
     cout << "Enter the Element which you want to insert : " ;
     cin >> newElement ;
-
-    if(n == 10){
-        cout << "Overflow condition." ;
-        return 0;
-    }
     
     for( int k = n-1 ; k >= 0 ; k-- ){
             arr[k+1] = arr[k] ;
@@ -27,9 +33,14 @@ int main(){
     arr[0] = newElement;
 
     n = n+1;
+    
+    cout << "Array after insertion : " ;
 
     for(int i = 0; i < n; i++){
         cout << arr[i] << " ";
     }
+
+    cout << "\n" ;
+
     return 0;
 }
