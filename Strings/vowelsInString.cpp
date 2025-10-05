@@ -2,7 +2,10 @@
 using namespace std;
 
 int main(){
-    string q = "animals live in jungle";\
+    string q ;
+
+    cout << "Enter a Sentence : " ;
+    getline(cin,q) ;
 
     int count = 0 ;
 
@@ -10,10 +13,9 @@ int main(){
         if( q[i] == 'a' || q[i] == 'e' || q[i] == 'i' || q[i] == 'o' ||q[i] == 'u' ){
             count++ ;
         }
-        
     }
 
-    cout << count << "\n" ;
+    cout << "The number of vowels in the sentence is : " << count << "\n" ;
 
     return 0;
 }
